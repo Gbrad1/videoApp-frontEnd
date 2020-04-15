@@ -1,0 +1,22 @@
+<h1>Hello! I'm upload bot.</h1>
+<p>Please fill out your video title and choose the correct file for upload.</p>
+<div mat-dialog-content>
+  <p>What's the title of your video?</p>
+  <mat-form-field>
+    <mat-label>Video Title</mat-label>
+    <input matInput > <!--[(ngModel)]="video.title"-->
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <input type="file" style="display: none" accept="video/mp4" (click)="handle($event)"/>
+  <button mat-raised-button color="primary" class="selectFileButton">
+    <mat-icon>attach_file</mat-icon>
+    Choose File
+  </button>
+  <button mat-button >Ok</button> <!--[mat-dialog-close]="video.title" cdkFocusInitial-->
+</div>
+
+
+
+

@@ -45,3 +45,15 @@ testem.log
 .DS_Store
 Thumbs.db
 
+.editorconfig
+angular.json
+browserslist
+karma.conf.js
+package.json
+package-lock.json
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
+tslint.json
+
+/e2e/
