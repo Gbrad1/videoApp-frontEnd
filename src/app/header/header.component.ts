@@ -53,6 +53,10 @@ export class HeaderComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
+
+  btnClick= function () {
+    this.router.navigateByUrl('/user');
+  };
 }
 
 

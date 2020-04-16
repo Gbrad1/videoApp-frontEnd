@@ -1,0 +1,9 @@
+.body_container {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+}
+
+.body_content {
+  width: 800px;
+}
