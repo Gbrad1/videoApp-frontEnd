@@ -18,8 +18,9 @@ export class UploadEngineComponent implements OnInit {
   }
 
   handle(file, videoTitle) {
+    console.log(videoTitle);
     console.log({file});
-    this.videoService.uploadVideo(file, videoTitle).subscribe(console.log);
+    this.videoService.uploadVideo(videoTitle, file).subscribe(console.log);
   }
 
 }

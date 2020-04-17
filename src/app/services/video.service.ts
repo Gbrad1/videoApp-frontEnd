@@ -14,7 +14,7 @@ export class VideoService {
   uploadVideo(video, title) {
     const body = new FormData();
     body.append('file', video);
-    return this.http.post(this.API + 'video/upload?videoName=randomShit', body);
+    return this.http.post(this.API + 'video/upload?videoName=' + title, body);
   }
 
   /*getVideo(video, title, path):{video:any, title:string, path: string} {
