@@ -1,10 +1,12 @@
 import {Component, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {MatVideoComponent} from "mat-video/lib/video.component";
 
+
 @Component({
   selector: 'app-videoscroll',
   templateUrl: './video-player.component.html',
   styleUrls: ['./video-player.component.css']
+
 })
 export class VideoPlayerComponent implements OnInit {
   @ViewChild('video') matVideo: MatVideoComponent;
@@ -20,4 +22,9 @@ export class VideoPlayerComponent implements OnInit {
     this.renderer.listen(this.video, 'ended', () => console.log('video ended'));
     this.video.addEventListener('ended', () => console.log('video ended'));
   }
+
+
+
+
+
 }

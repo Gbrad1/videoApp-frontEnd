@@ -22,6 +22,10 @@ import { UploadEngineComponent } from './upload-engine/upload-engine.component';
 import { FooterComponent } from './footer/footer.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { MatVideoModule } from 'mat-video';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {NgxSpinnerModule} from "ngx-spinner";
+import { VideoInfiniteScrollComponent } from './video-infinite-scroll/video-infinite-scroll.component';
 
 const appRoutes: Routes = [
 
@@ -36,7 +40,8 @@ const appRoutes: Routes = [
     DialogPromptComponentDialog,
     UploadEngineComponent,
     FooterComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    VideoInfiniteScrollComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,9 @@ const appRoutes: Routes = [
     MatDialogModule,
     FormsModule,
     MatDatepickerModule,
-    MatVideoModule
+    MatVideoModule,
+    InfiniteScrollModule,
+    NgxSpinnerModule
   ],
   exports: [
     MatButtonModule
@@ -61,4 +68,11 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+}
+
+
+
+platformBrowserDynamic().bootstrapModule(AppModule);
