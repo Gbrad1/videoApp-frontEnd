@@ -5,10 +5,10 @@
   <form class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Video title</mat-label>
-        <input matInput placeholder="Ex. The Ultimate showdown" #titleInput>
+        <input matInput type="text" placeholder="Ex. The Ultimate showdown" #titleInput>
       </mat-form-field>
     <br>
-    <input type="file" accept="video/mpeg4-generic" #input>
+    <input type="file" accept="video/mp4" #input>
     <button mat-raised-button color="primary" (click)="handle(input, titleInput)">Upload</button>
   </form>
 </div>

@@ -9,7 +9,6 @@ import {VideoService} from '../services/video.service';
 })
 export class UploadEngineComponent implements OnInit {
 
-  file: File;
   searchControl: FormControl;
   debounce = 400;
 
@@ -20,8 +19,7 @@ export class UploadEngineComponent implements OnInit {
 
   handle(file, videoTitle) {
     console.log({file});
-    this.file = file.files[0];
-    this.videoService.uploadVideo(this.file).subscribe(console.log);
+    this.videoService.uploadVideo(file, videoTitle).subscribe(console.log);
   }
 
 }

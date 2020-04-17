@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 @Injectable({
@@ -9,10 +9,12 @@ export class VideoService {
   public API = 'http://localhost:8080/';
   constructor(private http: HttpClient) { }
   getVideoFromAWS(videoId: number): Observable<any> {
-    return this.http.get(this.API + '/video/' + videoId);
+    return this.http.get(this.API + 'video/' + videoId);
   }
-  uploadVideo(video) {
-    return this.http.post(this.API + '/video/upload', video);
+  uploadVideo(video, title) {
+    const body = new FormData();
+    body.append('file', video);
+    return this.http.post(this.API + 'video/upload?videoName=randomShit', body);
   }
 
   /*getVideo(video, title, path):{video:any, title:string, path: string} {
