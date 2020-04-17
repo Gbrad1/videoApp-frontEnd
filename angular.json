@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "fullStack-frontEnd"
+  "defaultProject": "fullStack-frontEnd",
+  "cli": {
+    "analytics": false
+  }
 }

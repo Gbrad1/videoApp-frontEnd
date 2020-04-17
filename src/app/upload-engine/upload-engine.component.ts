@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-upload-engine',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class UploadEngineComponent implements OnInit {
 
   file: File;
+  searchControl: FormControl;
+  debounce = 400;
 
   constructor() { }
 

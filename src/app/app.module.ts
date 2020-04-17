@@ -19,9 +19,12 @@ import { FormsModule } from '@angular/forms';
 import { DialogPromptComponentDialog } from './header/header.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { UploadEngineComponent } from './upload-engine/upload-engine.component';
+import { FooterComponent } from './footer/footer.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
+import { MatVideoModule } from 'mat-video';
 
 const appRoutes: Routes = [
-  {path: '', component: HeaderComponent}
+
 ];
 
 @NgModule({
@@ -31,7 +34,9 @@ const appRoutes: Routes = [
     BodyComponent,
     VideoComponent,
     DialogPromptComponentDialog,
-    UploadEngineComponent
+    UploadEngineComponent,
+    FooterComponent,
+    VideoPlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +52,8 @@ const appRoutes: Routes = [
     MatInputModule,
     MatDialogModule,
     FormsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatVideoModule
   ],
   exports: [
     MatButtonModule
