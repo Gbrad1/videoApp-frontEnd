@@ -11,4 +11,11 @@ export class VideoService {
   getVideoFromAWS(videoId: number): Observable<any> {
     return this.http.get(this.API + '/video/' + videoId);
   }
+  uploadVideo(video) {
+    return this.http.post(this.API + '/video/upload', video);
+  }
+
+  /*getVideo(video, title, path):{video:any, title:string, path: string} {
+    return {video, title, path};
+  }*/
 }

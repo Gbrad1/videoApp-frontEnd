@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {VideoService} from '../services/video.service';
 
 @Component({
   selector: 'app-upload-engine',
@@ -12,13 +13,15 @@ export class UploadEngineComponent implements OnInit {
   searchControl: FormControl;
   debounce = 400;
 
-  constructor() { }
+  constructor(private videoService: VideoService ) { }
 
   ngOnInit(): void {
   }
 
-  handle(e) {
-    this.file = e;
+  handle(file, videoTitle) {
+    console.log({file});
+    this.file = file.files[0];
+    this.videoService.uploadVideo(this.file).subscribe(console.log);
   }
 
 }
