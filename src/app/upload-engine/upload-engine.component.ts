@@ -18,7 +18,7 @@ export class UploadEngineComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  handle(file, videoTitle) {
+  handle(videoTitle, file) {
     console.log({file});
     this.file = file.files[0];
     this.videoService.uploadVideo(this.file).subscribe(console.log);

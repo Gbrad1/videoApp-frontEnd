@@ -2,14 +2,15 @@
 <div class="uploadFileContainer">
   <h2 class ='toCenter'>Hi! I'm upload bot.</h2>
   <p class ='toCenter'>Please add your title and select the mp4 file to upload to your account.</p>
-  <form class="example-form" [formGroup]="addVideo">
+
+  <form id="data" method="get" action="/video/">
     <mat-form-field class="example-full-width">
       <mat-label>Video title</mat-label>
-        <input matInput placeholder="Ex. The Ultimate showdown" formControlName="videoTitle">
+        <input matInput type="text" required name="videoTitle" placeholder="Ex. The Ultimate showdown">
       </mat-form-field>
     <br>
-    <input type="file" accept="video/mpeg4-generic" formControl="video">
-    <button mat-raised-button color="primary" (click)="handle(input)">Upload</button>
+    <input type="file" required name="videoFile" accept="video/MP4">
+    <button mat-raised-button color="primary" (click)="handle()">Upload</button>
   </form>
 </div>
 
