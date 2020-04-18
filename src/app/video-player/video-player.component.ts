@@ -23,6 +23,11 @@ export class VideoPlayerComponent implements OnInit {
     this.video.addEventListener('ended', () => console.log('video ended'));
   }
 
+  retrieveVideo(){
+    return this.matVideo.getVideoTag()
+
+
+  }
 
 
 

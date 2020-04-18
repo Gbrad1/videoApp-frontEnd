@@ -22,9 +22,9 @@ import { UploadEngineComponent } from './upload-engine/upload-engine.component';
 import { FooterComponent } from './footer/footer.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
 import { MatVideoModule } from 'mat-video';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+// import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
-import {NgxSpinnerModule} from "ngx-spinner";
+// import {NgxSpinnerModule} from "ngx-spinner";
 import { VideoInfiniteScrollComponent } from './video-infinite-scroll/video-infinite-scroll.component';
 
 const appRoutes: Routes = [
@@ -41,7 +41,7 @@ const appRoutes: Routes = [
     UploadEngineComponent,
     FooterComponent,
     VideoPlayerComponent,
-    VideoInfiniteScrollComponent
+     VideoInfiniteScrollComponent
   ],
   imports: [
     BrowserModule,
@@ -59,8 +59,8 @@ const appRoutes: Routes = [
     FormsModule,
     MatDatepickerModule,
     MatVideoModule,
-    InfiniteScrollModule,
-    NgxSpinnerModule
+    // InfiniteScrollModule,
+    // NgxSpinnerModule
   ],
   exports: [
     MatButtonModule

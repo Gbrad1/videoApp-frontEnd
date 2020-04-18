@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import {HttpClient} from "@angular/common/http";
-import {resolveAny} from "dns";
+
 
 
 @Component({
@@ -64,5 +64,5 @@ export class VideoInfiniteScrollComponent implements OnInit {
         this.notscrolly = true;
       });
   }
-
 }
+

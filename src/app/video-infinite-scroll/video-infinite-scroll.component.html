@@ -1,56 +1,56 @@
-<div class="col-md-4 p-2" *ngFor="let post of allVideos">
+<!--<div class="col-md-4 p-2" *ngFor="let post of allVideos">-->
 
-  <!-- single post card -->
-  <div class="card shadow">
-    <div class="card-body">
-      <h5 class="card-title text-center ">{{post.name}} {{post.id}}</h5>
-      <p class="card-text">{{post.dis}}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-  <!-- single post card end -->
+<!--  &lt;!&ndash; single post card &ndash;&gt;-->
+<!--  <div class="card shadow">-->
+<!--    <div class="card-body">-->
+<!--      <h5 class="card-title text-center ">{{post.name}} {{post.id}}</h5>-->
+<!--      <p class="card-text">{{post.dis}}</p>-->
+<!--      <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; single post card end &ndash;&gt;-->
 
-</div>
-<!-- infinite scroll div -->
-<div
-  class="search-results"
-  infiniteScroll
-  [infiniteScrollDistance]="2"
-  [infiniteScrollThrottle]="50"
-  (scrolled)="onScroll()"
->
-  <div class="row pt-5">
+<!--</div>-->
+<!--&lt;!&ndash; infinite scroll div &ndash;&gt;-->
+<!--<div-->
+<!--  class="search-results"-->
+<!--  infiniteScroll-->
+<!--  [infiniteScrollDistance]="2"-->
+<!--  [infiniteScrollThrottle]="50"-->
+<!--  (scrolled)="onScroll()"-->
+<!--&gt;-->
+<!--  <div class="row pt-5">-->
 
-    <div class="col-md-4 p-2" *ngFor="let post of allVideos">
+<!--    <div class="col-md-4 p-2" *ngFor="let post of allVideos">-->
 
-      <!-- single post card -->
-      <div class="card shadow">
-        <div class="card-body">
-          <h5 class="card-title text-center ">{{post.name}} {{post.id}}</h5>
-          <p class="card-text">{{post.dis}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <!-- single post card end -->
+<!--      &lt;!&ndash; single post card &ndash;&gt;-->
+<!--      <div class="card shadow">-->
+<!--        <div class="card-body">-->
+<!--          <h5 class="card-title text-center ">{{post.name}} {{post.id}}</h5>-->
+<!--          <p class="card-text">{{post.dis}}</p>-->
+<!--          <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; single post card end &ndash;&gt;-->
 
-    </div>
+<!--    </div>-->
 
-  </div>
+<!--  </div>-->
 
-</div>
+<!--</div>-->
 
-<!-- infinity scroll div end -->
-<!-- sinner -->
-<div class="row pb-5">
-  <div class="col-md-12 p-5">
-    <ngx-spinner
-      bdOpacity = 0.9
-      bdColor = ""
-      size = "default"
-      color = "#581f87"
-      type = "la-square-jelly-box la-2x"
-      [fullScreen] = "false"
-    >
-    </ngx-spinner>
-  </div>
-</div>
+<!--&lt;!&ndash; infinity scroll div end &ndash;&gt;-->
+<!--&lt;!&ndash; sinner &ndash;&gt;-->
+<!--<div class="row pb-5">-->
+<!--  <div class="col-md-12 p-5">-->
+<!--    <ngx-spinner-->
+<!--      bdOpacity = 0.9-->
+<!--      bdColor = ""-->
+<!--      size = "default"-->
+<!--      color = "#581f87"-->
+<!--      type = "la-square-jelly-box la-2x"-->
+<!--      [fullScreen] = "false"-->
+<!--    >-->
+<!--    </ngx-spinner>-->
+<!--  </div>-->
+<!--</div>-->
