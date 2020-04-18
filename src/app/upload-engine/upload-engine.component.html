@@ -1,1 +1,28 @@
-<p>upload-engine works!</p>
+<div *ngIf="currentFileUpload" class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped"
+  role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+  area-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+    {{progress.percentage}}%
+  </div>
+</div>
+
+<label class="btn btn-default">
+  <input type="file" accept="video/mp4" (change)="selectFile($event)">
+</label>
+<input matInput type="text" placeholder="Ex. The Ultimate showdown" [(ngModel)]="currentTitle">
+<button class="btn btn-default" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+
+<!--<div class="uploadFileContainer">
+  <h2 class ='toCenter'>Hi! I'm upload bot.</h2>
+  <p class ='toCenter'>Please add your title and select the mp4 file to upload to your account.</p>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Video title</mat-label>
+        <input matInput type="text" placeholder="Ex. The Ultimate showdown" #titleInput>
+      </mat-form-field>
+    <br>
+    <input type="file" accept="video/mp4" (change)="onFileSelected($event)"#input>
+    <button mat-raised-button color="primary" (click)="handle(titleInput, input)">Upload</button>
+  </form>
+</div>-->
+
