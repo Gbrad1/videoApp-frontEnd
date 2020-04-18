@@ -3,6 +3,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 import {HttpClient} from "@angular/common/http";
 import {resolveAny} from "dns";
 
+
 @Component({
   selector: 'app-video-infinite-scroll',
   templateUrl: './video-infinite-scroll.component.html',
@@ -10,8 +11,9 @@ import {resolveAny} from "dns";
 })
 export class VideoInfiniteScrollComponent implements OnInit {
   private allVideos: any;
-  private http: any;
-  private allpost: resolveAny;
+  private allpost: any;
+  notEmptyPost = false;
+  notscrolly= true;
 
   constructor(private http: HttpClient, private spinner: NgxSpinnerService) { }
 
