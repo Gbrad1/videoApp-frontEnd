@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoInfiniteScrollComponent } from './video-infinite-scroll.component';
+import {NO_ERRORS_SCHEMA} from "@angular/core";
 
 describe('VideoInfiniteScrollComponent', () => {
   let component: VideoInfiniteScrollComponent;
@@ -8,7 +9,8 @@ describe('VideoInfiniteScrollComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoInfiniteScrollComponent ]
+      declarations: [ VideoInfiniteScrollComponent ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));

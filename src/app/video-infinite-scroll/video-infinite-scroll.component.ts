@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgModule, OnInit} from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import {HttpClient} from "@angular/common/http";
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 
 
 
@@ -10,8 +12,8 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./video-infinite-scroll.component.css']
 })
 export class VideoInfiniteScrollComponent implements OnInit {
-  private allVideos: any;
-  private allpost: any;
+   allPost;
+   allpost;
   notEmptyPost = false;
   notscrolly= true;
 
@@ -22,9 +24,9 @@ export class VideoInfiniteScrollComponent implements OnInit {
   }
 //load the  initial video from back end
   loadInitPost() {
-    const url = 'http://videosfromVidStack';
+    const url = 'http://tlino.96.lt/api/getblogpost';
     this.http.get(url).subscribe(data => {
-      this.allVideos = data[0];
+      this.allPost = data[0];
     });
   }
 
@@ -38,7 +40,7 @@ export class VideoInfiniteScrollComponent implements OnInit {
 
   //load in next 6 videos
   loadNextPost() {
-    const url = 'http://videosfromVidStack';
+    const url = 'http://tlino.96.lt/api/getblogpost';
     // return last post from the array
     const lastPost = this.allpost[this.allpost.length - 1];
     // get id of last post
