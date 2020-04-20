@@ -31,6 +31,7 @@ export class UploadEngineComponent implements OnInit {
 
   upload() {
     this.progress.percentage = 0;
+    console.log(this.progress);
     this.currentFileUpload = this.selectedFiles.item(0);
     this.uploadService.uploadVideo(this.currentFileUpload, this.currentTitle).subscribe(event => {
       if (event.type === HttpEventType.UploadProgress) {
