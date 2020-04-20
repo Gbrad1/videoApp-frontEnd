@@ -2,7 +2,7 @@
   <div class="video_content">
     <h2>Welcome to VidStack</h2>
     <ul class="videoList">
-      <li *ngFor="let video of videoArray" class="listItem_video">
+      <li *ngFor="let video of videoArray | reverse" class="listItem_video">
         <div class="video_title_above_video">{{video.videoTitle}}</div>
         <mat-video class="video_item" src="{{video.videoPath}}"></mat-video>
           <mat-form-field class="comment_block">
