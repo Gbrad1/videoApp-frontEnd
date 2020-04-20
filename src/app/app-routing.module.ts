@@ -4,6 +4,7 @@ import {UploadEngineComponent} from './upload-engine/upload-engine.component';
 import {BodyComponent} from './body/body.component';
 import {AppComponent} from './app.component';
 import {FooterComponent} from './footer/footer.component';
+import {VideoComponent} from './video/video.component';
 
 
 /*
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'uploadEngine', component: UploadEngineComponent },
   { path: 'body', component: BodyComponent },
   { path: 'index', component: AppComponent },
-  { path: 'footer', component: FooterComponent}
+  { path: 'footer', component: FooterComponent},
+  { path: 'videos', component: VideoComponent}
 ];
 
 @NgModule({

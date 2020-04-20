@@ -9,6 +9,10 @@ export class VideoService {
   public API = 'http://localhost:8080/';
   constructor(private http: HttpClient) { }
 
+  getAllVideosFromAWS(): Observable<any> {
+    return this.http.get(this.API + 'video/');
+  }
+
   getVideoFromAWS(videoId: number): Observable<any> {
     return this.http.get(this.API + 'video/' + videoId);
   }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
 import {VideoService} from '../services/video.service';
 import {HttpEventType, HttpResponse} from '@angular/common/http';
 
