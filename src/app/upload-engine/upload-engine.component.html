@@ -1,8 +1,8 @@
 <div *ngIf="currentFileUpload" class="progress">
   <div class="progress-bar progress-bar-info progress-bar-striped"
-  role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
-  area-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
-    {{progress.percentage}}%
+  role="progressbar" attr.aria-valuenow="{{progress}}"
+  area-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress + '%'}">
+    {{progress}}%
   </div>
 </div>
 

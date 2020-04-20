@@ -12,7 +12,7 @@ export class UploadEngineComponent implements OnInit {
   selectedFiles: FileList;
   currentFileUpload: File;
   currentTitle: string;
-  progress: { percentage: number } = { percentage: 0 };
+  progress = 0;
 
   constructor(private uploadService: VideoService ) { }
 
@@ -30,12 +30,12 @@ export class UploadEngineComponent implements OnInit {
   }
 
   upload() {
-    this.progress.percentage = 0;
     console.log(this.progress);
     this.currentFileUpload = this.selectedFiles.item(0);
     this.uploadService.uploadVideo(this.currentFileUpload, this.currentTitle).subscribe(event => {
       if (event.type === HttpEventType.UploadProgress) {
-        this.progress.percentage = Math.round(100 * event.loaded / event.total);
+        this.progress = Math.round(100 * event.loaded / event.total);
+        console.log(this.progress);
       } else if (event instanceof HttpResponse) {
         console.log('File Uploaded!');
       }

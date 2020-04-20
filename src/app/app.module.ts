@@ -21,6 +21,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { UploadEngineComponent } from './upload-engine/upload-engine.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatVideoModule } from 'mat-video';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 
 const appRoutes: Routes = [
 
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     MatDialogModule,
     FormsModule,
     MatDatepickerModule,
-    MatVideoModule
+    MatVideoModule,
+    MatProgressBarModule
   ],
   exports: [
     MatButtonModule
