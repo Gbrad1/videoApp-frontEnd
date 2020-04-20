@@ -2,8 +2,43 @@ h2 {
   font-family: 'Righteous', cursive;
 }
 
-.uploadFileContainer {
-  padding: 30px;
+.video_upload_container {
+  position: absolute;
   margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 700px;
+  height: 300px;
+  border: solid;
+  border-radius: 15px;
+  border-color: #BDBDBD;
+  border-width: 1px;
+  box-shadow: 5px 10px 10px #BDBDBD;
 }
 
+.video_upload_elements {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.select_file_button {
+  margin: 10px;
+}
+
+.add_comment_button {
+  margin: 10px;
+}
+
+.progress {
+  margin: 10px;
+}
+
+mat-form-field {
+  width: 400px;
+}

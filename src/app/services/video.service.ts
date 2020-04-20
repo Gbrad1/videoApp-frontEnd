@@ -22,7 +22,10 @@ export class VideoService {
     body.append('file', video);
     body.append('videoName', title);
     console.log(title);
-    const httpRequest = new HttpRequest('POST', this.API + 'video/upload', body);
+    const httpRequest = new HttpRequest('POST', this.API + 'video/upload', body, {
+      reportProgress: true,
+        responseType: 'json'
+    });
     return this.http.request(httpRequest);
   }
 }

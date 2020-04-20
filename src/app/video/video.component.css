@@ -17,6 +17,7 @@
   border: solid;
   border-color: #BDBDBD;
   border-radius: 15px;
+  border-width: 1px;
   margin: 4%;
   box-shadow: 5px 10px 10px #BDBDBD;
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {VideoService} from '../services/video.service';
-import {HttpEventType, HttpResponse} from '@angular/common/http';
+import { VideoService } from '../services/video.service';
+import { HttpEventType, HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-upload-engine',
@@ -37,7 +37,7 @@ export class UploadEngineComponent implements OnInit {
         this.progress = Math.round(100 * event.loaded / event.total);
         console.log(this.progress);
       } else if (event instanceof HttpResponse) {
-        console.log('File Uploaded!');
+        console.log('Done!');
       }
     });
     this.selectedFiles = undefined;
