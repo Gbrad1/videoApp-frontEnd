@@ -16,10 +16,4 @@ export class AppComponent {
   onFilesSelected(event) {
     this.selectedFile = event.target.files[0];
   }
-
-  onUpload() {
-/*
-    this.http.post('url of webserver that is taking the video.')
-*/
-  }
 }

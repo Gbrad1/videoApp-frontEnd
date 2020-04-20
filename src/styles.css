@@ -1,30 +1,24 @@
 /* Application-wide Styles */
 h1 {
-  color: #FF6C38;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
 h2, h3 {
-  color: #FFEEE6;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+  color: #000;
+  font-family: 'Righteous', cursive;
 }
 body {
   margin: 2em;
 }
 body, input[type="text"], button {
-  color: #FFEEE6;
+  color: #000;
   font-family: Cambria, Georgia;
 }
 
-button {
-  color: #FFEEE6;
-  border-style: none;
-  background-color: #FF6C38;
-  border-radius: 15px;
-}
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #292929;
 }
+
+html, body { position: relative; height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

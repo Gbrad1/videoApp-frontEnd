@@ -46,6 +46,7 @@ testem.log
 Thumbs.db
 
 /e2e/
+<<<<<<< HEAD
 .editorconfig
 angular.json
 browserslist
@@ -56,3 +57,5 @@ tsconfig.app.json
 tsconfig.json
 tsconfig.spec.json
 tslint.json
+=======
+>>>>>>> 6f18412bb27e79b95eafafe66e578fa114b6861c
