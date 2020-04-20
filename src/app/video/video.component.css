@@ -1,0 +1,50 @@
+
+.video_content {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.video_item {
+  margin: 100px;
+}
+
+.videoList {
+  list-style: none;
+}
+
+.listItem_video {
+  padding: 2%;
+  border: solid;
+  border-color: #BDBDBD;
+  border-radius: 15px;
+  margin: 4%;
+  box-shadow: 5px 10px 10px #BDBDBD;
+}
+
+h2 {
+  text-align: center;
+}
+
+.comment_block {
+  width: 100%;
+}
+
+.comment_field {
+  width: 100%;
+}
+
+.video_title_above_video {
+  font-size: 2em;
+}
+
+.comment_block {
+  padding-top: 2%;
+}
+
+.video_button_container {
+  display: flex;
+}
+
+.video_button {
+  margin-left: 10px;
+}
