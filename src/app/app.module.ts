@@ -22,6 +22,7 @@ import { UploadEngineComponent } from './upload-engine/upload-engine.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatVideoModule } from 'mat-video';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { CommentComponent } from './comment/comment.component';
 
 
 const appRoutes: Routes = [
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     DialogPromptComponentDialog,
     UploadEngineComponent,
     FooterComponent,
-    ReversePipe
+    ReversePipe,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,7 @@ const appRoutes: Routes = [
     FormsModule,
     MatDatepickerModule,
     MatVideoModule,
-    MatProgressBarModule
+    MatProgressBarModule,
   ],
   exports: [
     MatButtonModule

@@ -7,6 +7,7 @@ import {Observable} from 'rxjs';
 })
 export class VideoService {
   public API = 'http://localhost:8080/';
+
   constructor(private http: HttpClient) { }
 
   getAllVideosFromAWS(): Observable<any> {
@@ -26,6 +27,11 @@ export class VideoService {
       reportProgress: true,
         responseType: 'json'
     });
+    return this.http.request(httpRequest);
+  }
+
+  addCommentToVideoArray(comment: string, id: number) {
+    const httpRequest = new HttpRequest('PUT', this.API + 'video/comment/' + id, comment);
     return this.http.request(httpRequest);
   }
 }

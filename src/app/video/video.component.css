@@ -26,26 +26,6 @@ h2 {
   text-align: center;
 }
 
-.comment_block {
-  width: 100%;
-}
-
-.comment_field {
-  width: 100%;
-}
-
 .video_title_above_video {
   font-size: 2em;
-}
-
-.comment_block {
-  padding-top: 2%;
-}
-
-.video_button_container {
-  display: flex;
-}
-
-.video_button {
-  margin-left: 10px;
 }
