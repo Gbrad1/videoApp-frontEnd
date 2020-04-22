@@ -14,11 +14,11 @@ export class CommentComponent implements OnInit {
 
   constructor(private commentService: VideoService) { }
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {
+}
 
-  commentOnVideo(id) {
-    this.commentService.addCommentToVideoArray(this.currentComment, id);
-    console.log(this.video);
-  }
+/*commentOnVideo(id) {
+  this.commentService.addCommentToVideoArray(this.currentComment, id);
+  console.log(this.video);
+}*/
 }

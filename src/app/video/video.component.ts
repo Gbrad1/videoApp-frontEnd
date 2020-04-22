@@ -22,6 +22,7 @@ export class VideoComponent implements OnInit {
 
   videoArray: Observable<any>;
   video: any;
+  currentComment: string;
 
   constructor(private videoService: VideoService) { }
 
@@ -29,5 +30,10 @@ export class VideoComponent implements OnInit {
     this.videoService.getAllVideosFromAWS().subscribe(data => {
       this.videoArray = data;
     });
+  }
+
+  commentOnVideo(id) {
+    this.videoService.addCommentToVideoArray(this.currentComment, id);
+    console.log(this.video);
   }
 }
