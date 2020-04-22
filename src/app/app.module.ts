@@ -22,6 +22,8 @@ import { UploadEngineComponent } from './upload-engine/upload-engine.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatVideoModule } from 'mat-video';
 
+
+
 const appRoutes: Routes = [
 
 ];
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     DialogPromptComponentDialog,
     UploadEngineComponent,
     FooterComponent,
-    ReversePipe
+    ReversePipe,
+    
   ],
   imports: [
     BrowserModule,
