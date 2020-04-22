@@ -25,12 +25,12 @@ export class VideoService {
     console.log(title);
     const httpRequest = new HttpRequest('POST', this.API + 'video/upload', body, {
       reportProgress: true,
-        responseType: 'json'
+      responseType: 'json'
     });
     return this.http.request(httpRequest);
   }
 
-  addCommentToVideoArray(comment: string, id: number) {
+  addCommentToVideoArray(comment: any, id: number) {
     const httpRequest = new HttpRequest('PUT', this.API + 'video/comment/' + id, comment);
     return this.http.request(httpRequest);
   }
