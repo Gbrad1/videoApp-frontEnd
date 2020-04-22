@@ -13,7 +13,7 @@ import {VideoComponent} from './video/video.component';
 * Routes tell the Router which view to display when a user clicks a link or pastes a URL into the browser address bar.
 *
 * The 'path' variable is a string that matches the URL in the browser address bar.
-* The 'component' variable is the compoment that the router should create when navigating to this route.
+* The 'component' variable is the component that the router should create when navigating to this route.
 * */
 const routes: Routes = [
   { path: 'uploadEngine', component: UploadEngineComponent },
