@@ -1,1 +1,15 @@
-<p>upload-engine works!</p>
+<div *ngIf="currentFileUpload" class="progress">
+  <div class="progress-bar progress-bar-info progress-bar-striped"
+  role="progressbar" attr.aria-valuenow="{{progress.percentage}}"
+  area-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+    {{progress.percentage}}%
+  </div>
+</div>
+
+<label class="btn btn-default">
+  <input type="file" accept="video/mp4" (change)="selectFile($event)">
+</label>
+<input matInput type="text" placeholder="Ex. The Ultimate showdown" [(ngModel)]="currentTitle">
+<button class="btn btn-default" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+
+

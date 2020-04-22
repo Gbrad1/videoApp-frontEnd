@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {VideoService} from '../services/video.service';
-import { FormControl } from '@angular/forms';
-import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-video',
@@ -10,24 +9,14 @@ import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
 })
 export class VideoComponent implements OnInit {
 
+  videoArray: Observable<any>;
   video: any;
-  searchControl: FormControl;
-  debounce: 400;
 
   constructor(private videoService: VideoService) { }
 
   ngOnInit(): void {
-    this.videoService.getVideoFromAWS(0).subscribe(data => {
-      this.video = data;
+    this.videoService.getAllVideosFromAWS().subscribe(data => {
+      this.videoArray = data;
     });
-    this.searchControl = new FormControl('');
-    this.searchControl.valueChanges
-      .pipe(debounceTime(this.debounce), distinctUntilChanged())
-      .subscribe(query => {
-        this.videoService.getVideoFromAWS(query).subscribe(data => {
-          this.video = data;
-        });
-      });
   }
-
 }

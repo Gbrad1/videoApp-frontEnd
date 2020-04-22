@@ -9,7 +9,9 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <input type="file" style="display: none" accept="video/mp4" (click)="handle($event)"/>
+  <form class="example-form">
+    <input type="file" placeholder="Steam Account ID">
+  </form>
   <button mat-raised-button color="primary" class="selectFileButton">
     <mat-icon>attach_file</mat-icon>
     Choose File
