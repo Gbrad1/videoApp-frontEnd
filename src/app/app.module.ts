@@ -25,6 +25,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { CommentComponent } from './comment/comment.component';
 
 
+
+
 const appRoutes: Routes = [
 
 ];
@@ -39,7 +41,11 @@ const appRoutes: Routes = [
     UploadEngineComponent,
     FooterComponent,
     ReversePipe,
+<<<<<<< HEAD
     CommentComponent
+=======
+    
+>>>>>>> 034f18ce168ec956c8e9ab956998d7991c1799f1
   ],
   imports: [
     BrowserModule,
