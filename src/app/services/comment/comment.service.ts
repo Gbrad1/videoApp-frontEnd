@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
 import {HttpClient, HttpRequest} from "@angular/common/http";
 
 @Injectable({
@@ -11,9 +10,10 @@ export class CommentService {
 
   constructor(private http: HttpClient) { }
 
-  addCommentToVideoArray(comment: any, id: number) {
-    const httpRequest = new HttpRequest('PUT', this.API + 'video/comment/' + id, comment);
-    return this.http.request(httpRequest);
+  addCommentToVideoArray(comment: string, id: number) {
+    /*const httpRequest = new HttpRequest('POST', this.API + 'comments/create/' + id, comment);
+    return this.http.request(httpRequest);*/
+    return this.http.post(this.API + 'comments/create/' + id, comment);
   }
 
 }

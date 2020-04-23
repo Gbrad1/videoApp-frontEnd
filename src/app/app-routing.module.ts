@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'index', component: AppComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'videos', component: VideoComponent},
-  {path: 'comments', component: CommentComponent}
+  {path: 'comments/:id', component: CommentComponent},
 ];
 
 @NgModule({

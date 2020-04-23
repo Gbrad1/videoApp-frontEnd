@@ -6,7 +6,7 @@
           <div class="video_title_above_video">{{video.videoTitle}}</div>
           <mat-video class="video_item" [keyboard]="false" [preload]="true" spinner="hourglass"  src="{{video.videoPath}}"></mat-video>
           <div class="video_button_container">
-            <button mat-stroked-button routerLink="/comments" class="video_button" (click)="openVideoInNewTab(video.id)">Comment</button>
+            <button mat-stroked-button [routerLink]="['/comments', video.id]" class="video_button" (click)="openVideoInNewTab(video.id)">Comment</button>
           </div>
       </li>
     </ul>

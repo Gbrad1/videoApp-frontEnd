@@ -14,6 +14,10 @@ export class VideoService {
     return this.http.get(this.API + 'video/');
   }
 
+  getVideoFromAWS(videoId: number): Observable<any> {
+    return this.http.get(this.API + 'video/' + videoId);
+  }
+
   uploadVideo(video, title): Observable<HttpEvent<any>> {
     const body = new FormData();
     body.append('file', video);
@@ -24,9 +28,5 @@ export class VideoService {
       responseType: 'json'
     });
     return this.http.request(httpRequest);
-  }
-
-  getVideoFromAWS(videoId): Observable<any> {
-    return this.http.get(this.API + 'video/' + videoId);
   }
 }

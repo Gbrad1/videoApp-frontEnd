@@ -33,9 +33,9 @@ export class VideoComponent implements OnInit {
     });
   }
 
-  openVideoInNewTab(video: Video) {
-    this.videoService.getVideoFromAWS(video);
-    console.log(video);
+  openVideoInNewTab(videoId: number) {
+    this.videoService.getVideoFromAWS(videoId);
+    console.log(videoId);
   }
 
   selectVideo(video: Video) { this.selectedVideo = video;}
