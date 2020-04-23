@@ -22,10 +22,7 @@ import { UploadEngineComponent } from './upload-engine/upload-engine.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatVideoModule } from 'mat-video';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { CommentComponent } from './comment/comment.component';
-
-
-
+import { CommentPageComponent } from './comment-page/comment-page.component';
 
 const appRoutes: Routes = [
 
@@ -41,11 +38,7 @@ const appRoutes: Routes = [
     UploadEngineComponent,
     FooterComponent,
     ReversePipe,
-<<<<<<< HEAD
-    CommentComponent
-=======
-    
->>>>>>> 034f18ce168ec956c8e9ab956998d7991c1799f1
+    CommentPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +47,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     BrowserAnimationsModule,
     MatIconModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true}),
+    RouterModule.forRoot(appRoutes),
     MatToolbarModule,
     MatSelectModule,
     MatFormFieldModule,

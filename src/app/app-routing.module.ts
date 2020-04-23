@@ -5,6 +5,7 @@ import {BodyComponent} from './body/body.component';
 import {AppComponent} from './app.component';
 import {FooterComponent} from './footer/footer.component';
 import {VideoComponent} from './video/video.component';
+import {CommentPageComponent} from "./comment-page/comment-page.component";
 
 
 /*
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'body', component: BodyComponent },
   { path: 'index', component: AppComponent },
   { path: 'footer', component: FooterComponent},
-  { path: 'videos', component: VideoComponent}
+  { path: 'videos', component: VideoComponent},
+  { path: 'comments', component: CommentPageComponent}
 ];
 
 @NgModule({

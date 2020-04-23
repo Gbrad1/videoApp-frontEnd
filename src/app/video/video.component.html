@@ -3,14 +3,9 @@
     <h2>Welcome to VidStack</h2>
     <ul class="videoList">
       <li *ngFor="let video of videoArray | reverse" class="listItem_video">
-<<<<<<< HEAD
         <form #commentForm="ngForm" (ngSubmit)="commentOnVideo(commentForm.value, video.id)">
           <div class="video_title_above_video">{{video.videoTitle}}</div>
           <mat-video class="video_item" [keyboard]="false" [preload]="true" spinner="hourglass"  src="{{video.videoPath}}"></mat-video>
-=======
-        <div class="video_title_above_video">{{video.videoTitle}}</div>
-        <mat-video class="video_item" [keyboard]="false" [preload]="true"  spinner="hourglass"  src="{{video.videoPath}}"></mat-video>
->>>>>>> 034f18ce168ec956c8e9ab956998d7991c1799f1
           <mat-form-field class="comment_block">
             <mat-label>Leave a comment</mat-label>
             <textarea matInput class="comment_field" name="comment" rows="5" required [(ngModel)]="selectedValue"></textarea>
