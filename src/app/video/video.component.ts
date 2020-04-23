@@ -1,8 +1,8 @@
 import {Component, Injectable, Input, OnInit} from '@angular/core';
-import {VideoService} from '../services/video.service';
+import {VideoService} from '../services/video/video.service';
 import {Observable} from 'rxjs';
 import { Pipe, PipeTransform } from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {CommentService} from "../services/comment/comment.service";
 
 @Pipe({ name: 'reverse' })
 
@@ -21,7 +21,9 @@ export class ReversePipe implements PipeTransform {
 export class VideoComponent implements OnInit {
 
   videoArray: Observable<any>;
-  selectedValue: string;
+  selectedVideo: any;
+  currentId: number;
+  selectedId: number;
 
   constructor(private videoService: VideoService) { }
 
@@ -31,10 +33,19 @@ export class VideoComponent implements OnInit {
     });
   }
 
-  commentOnVideo(form: NgForm, id: number) {
-    this.videoService.addCommentToVideoArray(form, id);
-    console.log(form);
-    console.log(id);
-    console.log(this.selectedValue);
+  openVideoInNewTab(video: Video) {
+    this.videoService.getVideoFromAWS(video);
+    console.log(video);
   }
+
+  selectVideo(video: Video) { this.selectedVideo = video;}
+}
+
+export class Video {
+  id: number;
+  thumbsUp: number;
+  thumbsDown: number;
+  videoTitle: string;
+  videoPath: string;
+  initialTitle: string;
 }

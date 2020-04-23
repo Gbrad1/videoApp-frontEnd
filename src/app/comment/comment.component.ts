@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {VideoService} from '../services/video.service';
+import {VideoService} from '../services/video/video.service';
+import {NgForm} from "@angular/forms";
+import {CommentService} from "../services/comment/comment.service";
 
 @Component({
   selector: 'app-comment',
@@ -12,13 +14,13 @@ export class CommentComponent implements OnInit {
   video: any;
   currentComment: any;
 
-  constructor(private commentService: VideoService) { }
+  constructor(private commentService: CommentService) { }
 
 ngOnInit(): void {
 }
 
-/*commentOnVideo(id) {
-  this.commentService.addCommentToVideoArray(this.currentComment, id);
-  console.log(this.video);
-}*/
+  commentOnVideo(form: NgForm, id: number) {
+
+  }
+
 }

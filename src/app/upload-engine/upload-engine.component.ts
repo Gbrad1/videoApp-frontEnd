@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { VideoService } from '../services/video.service';
+import { VideoService } from '../services/video/video.service';
 import { HttpEventType, HttpResponse } from '@angular/common/http';
 
 @Component({

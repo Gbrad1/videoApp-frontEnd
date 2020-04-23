@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {UploadEngineComponent} from './upload-engine/upload-engine.component';
 import {BodyComponent} from './body/body.component';
 import {AppComponent} from './app.component';
 import {FooterComponent} from './footer/footer.component';
 import {VideoComponent} from './video/video.component';
-import {CommentPageComponent} from "./comment-page/comment-page.component";
+import {CommentComponent} from "./comment/comment.component";
 
 
 /*
@@ -17,12 +17,12 @@ import {CommentPageComponent} from "./comment-page/comment-page.component";
 * The 'component' variable is the component that the router should create when navigating to this route.
 * */
 const routes: Routes = [
-  { path: 'uploadEngine', component: UploadEngineComponent },
-  { path: 'body', component: BodyComponent },
-  { path: 'index', component: AppComponent },
-  { path: 'footer', component: FooterComponent},
-  { path: 'videos', component: VideoComponent},
-  { path: 'comments', component: CommentPageComponent}
+  {path: 'uploadEngine', component: UploadEngineComponent},
+  {path: 'body', component: BodyComponent},
+  {path: 'index', component: AppComponent},
+  {path: 'footer', component: FooterComponent},
+  {path: 'videos', component: VideoComponent},
+  {path: 'comments', component: CommentComponent}
 ];
 
 @NgModule({
