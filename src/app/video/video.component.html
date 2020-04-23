@@ -2,9 +2,9 @@
   <div class="video_content">
     <h2>Welcome to VidStack</h2>
     <ul class="videoList">
-      <li *ngFor="let video of videoArray" class="listItem_video">
+      <li *ngFor="let video of videoArray | reverse" class="listItem_video">
         <div class="video_title_above_video">{{video.videoTitle}}</div>
-        <mat-video class="video_item" src="{{video.videoPath}}"></mat-video>
+        <mat-video class="video_item" [keyboard]="false" [preload]="true"  spinner="hourglass"  src="{{video.videoPath}}"></mat-video>
           <mat-form-field class="comment_block">
             <mat-label>Leave a comment</mat-label>
             <textarea matInput class="comment_field" name="comment" rows="5" required="required"></textarea>

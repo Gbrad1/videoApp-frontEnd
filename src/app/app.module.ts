@@ -14,13 +14,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
-import { VideoComponent } from './video/video.component';
+import {ReversePipe, VideoComponent} from './video/video.component';
 import { FormsModule } from '@angular/forms';
 import { DialogPromptComponentDialog } from './header/header.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { UploadEngineComponent } from './upload-engine/upload-engine.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatVideoModule } from 'mat-video';
+
+
 
 const appRoutes: Routes = [
 
@@ -34,7 +36,9 @@ const appRoutes: Routes = [
     VideoComponent,
     DialogPromptComponentDialog,
     UploadEngineComponent,
-    FooterComponent
+    FooterComponent,
+    ReversePipe,
+    
   ],
   imports: [
     BrowserModule,
