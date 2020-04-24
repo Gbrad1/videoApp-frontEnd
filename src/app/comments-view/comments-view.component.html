@@ -1,0 +1,8 @@
+<div class="comment_container">
+<mat-list class="comment_list">
+  <mat-list-item *ngFor="let comment of comments" class="comment_item">
+    <div class="comment">{{comment.message}}<br><hr></div>
+  </mat-list-item>
+  <button mat-stroked-button routerLink="/videos" class="backButton">Back</button>
+</mat-list>
+</div>

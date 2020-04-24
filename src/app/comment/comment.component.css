@@ -1,0 +1,26 @@
+.comment_block {
+  padding-top: 2%;
+}
+
+.video_button_container {
+  display: flex;
+}
+
+.comment_block {
+  width: 100%;
+}
+
+.comment_container {
+  margin: 2%;
+}
+
+.comment_field {
+  width: 100%;
+}
+
+.video_title_above_video {
+  margin: 2%;
+  font-family: 'Righteous', cursive;
+  font-size: 2em;
+}
+

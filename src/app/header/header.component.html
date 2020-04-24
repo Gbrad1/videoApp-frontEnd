@@ -1,8 +1,8 @@
 <mat-toolbar>
   <h1>{{siteName}}</h1>
   <div class="buttons">
-    <button mat-button color="black">Home</button>
-    <button mat-button color="black" (click)="openDialog()">Upload</button>
+    <a routerLink="/videos"><button mat-button color="black">Videos</button></a>
+    <a routerLink="/uploadEngine"><button mat-button class="uploadVideoButton" >Upload</button></a>
     <button mat-button color="black">Saved</button>
   </div>
 </mat-toolbar>

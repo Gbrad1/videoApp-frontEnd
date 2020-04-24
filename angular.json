@@ -26,8 +26,7 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
-            ],
-            "scripts": []
+            ]
           },
           "configurations": {
             "production": {
@@ -123,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "fullStack-frontEnd"
+  "defaultProject": "fullStack-frontEnd",
+  "cli": {
+    "analytics": false
+  }
 }

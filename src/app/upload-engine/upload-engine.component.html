@@ -1,1 +1,30 @@
-<p>upload-engine works!</p>
+<div class="video_upload_container">
+  <div class="video_upload_elements">
+    <div class="select_file_button">
+      <h3>Select a file to upload</h3>
+      <label class="btn btn-default">
+        <input type="file" accept="video/mp4" (change)="selectFile($event)">
+      </label>
+    </div>
+    <div class="add_comment_button">
+      <mat-form-field class="example-full-width">
+        <mat-label>Add a video title</mat-label>
+        <textarea matInput placeholder="Ex. The Ultimate Showdown" [(ngModel)]="currentTitle"></textarea>
+      </mat-form-field>
+      <div class="submit_video_button">
+        <button mat-stroked-button class="btn btn-default" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+      </div>
+    </div>
+
+
+    <div *ngIf="currentFileUpload" class="progress">
+      <div class="progress-bar progress-bar-info progress-bar-striped"
+           role="progressbar" attr.aria-valuenow="{{progress}}"
+           area-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress + '%'}">
+        <mat-progress-bar mode="determinate" value="{{progress}}"></mat-progress-bar>
+        {{progress}}%
+      </div>
+    </div>
+  </div>
+</div>
+
