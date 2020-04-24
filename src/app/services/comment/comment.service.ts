@@ -7,7 +7,8 @@ import {Observable} from "rxjs";
 })
 export class CommentService {
 
-  public API = 'http://vidstack.herokuapp.com/';
+  public API = 'https://vidstack.herokuapp.com/';
+  /*public API = 'http://localhost:8080/';*/
 
   constructor(private http: HttpClient) { }
 

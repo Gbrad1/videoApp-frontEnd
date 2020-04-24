@@ -6,7 +6,8 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class VideoService {
-  public API = 'http://vidstack.herokuapp.com/';
+  public API = 'https://vidstack.herokuapp.com/';
+  /*public API = 'http://localhost:8080/';*/
 
   constructor(private http: HttpClient) { }
 
