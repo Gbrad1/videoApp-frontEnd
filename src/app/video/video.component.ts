@@ -22,10 +22,10 @@ export class VideoComponent implements OnInit {
 
   videoArray: Observable<any>;
   selectedVideo: any;
-  currentId: number;
-  selectedId: number;
+  commentArray: Observable<any>;
 
-  constructor(private videoService: VideoService) { }
+  constructor(private videoService: VideoService,
+              private commentService: CommentService) { }
 
   ngOnInit(): void {
     this.videoService.getAllVideosFromAWS().subscribe(data => {

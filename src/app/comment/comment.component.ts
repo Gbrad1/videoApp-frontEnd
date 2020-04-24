@@ -15,8 +15,8 @@ export class CommentComponent implements OnInit {
   @Input()
   video: any;
   videos: Array<any>;
-  videoId: number;
   selectedValue: string;
+  comments: Array<any>;
 
   constructor(private videoService: VideoService,
               private route: ActivatedRoute,
