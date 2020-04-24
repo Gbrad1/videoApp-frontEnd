@@ -26,6 +26,8 @@ import {CommentComponent} from "./comment/comment.component";
 import {VideoService} from "./services/video/video.service";
 import {CommentService} from "./services/comment/comment.service";
 import { CommentsViewComponent } from './comments-view/comments-view.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
 
 const appRoutes: Routes = [
 
@@ -60,7 +62,9 @@ const appRoutes: Routes = [
     FormsModule,
     MatDatepickerModule,
     MatVideoModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatCardModule,
+    MatListModule
   ],
   exports: [
     MatButtonModule
