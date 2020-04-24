@@ -47,7 +47,7 @@ export class CommentComponent implements OnInit {
 
   commentOnVideo(id: number) {
     console.log(this.selectedValue);
-    this.commentService.addCommentToVideoArray(this.selectedValue, id);
+    this.commentService.addCommentToVideoArray(this.selectedValue, id).subscribe();
     this.router.navigate(['/videos'])
   }
 

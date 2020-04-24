@@ -13,6 +13,7 @@ export class CommentService {
   addCommentToVideoArray(comment: string, id: number) {
     /*const httpRequest = new HttpRequest('POST', this.API + 'comments/create/' + id, comment);
     return this.http.request(httpRequest);*/
+    console.log(this.API + 'comments/create/');
     return this.http.post(this.API + 'comments/create/' + id, comment);
   }
 
